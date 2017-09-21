@@ -27,6 +27,17 @@ img {
 	margin: auto;
 	width: 30%;
 }
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .overlay {
   position: absolute;
   top: 0;
