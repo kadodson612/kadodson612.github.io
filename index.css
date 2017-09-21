@@ -22,11 +22,7 @@ li a {
 li a:hover {
     background-color: #ffca99;
 }
-img {
-	display: block;
-	margin: auto;
-	width: 30%;
-}
+
 .container {
   position: relative;
   width: 50%;
@@ -48,7 +44,7 @@ img {
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-color: #008CBA;
+  background-color: #ffe5cc;
 }
 
 .container:hover .overlay {
