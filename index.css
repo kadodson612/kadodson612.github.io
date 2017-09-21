@@ -3,7 +3,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #BF3F3F;
+    background-color: #ffe5cc;
 }
 
 li {
@@ -19,7 +19,7 @@ li a {
 }
 
 li a:hover {
-    background-color: #111;
+    background-color: #ffca99;
 }
 img {
 	display: block;
