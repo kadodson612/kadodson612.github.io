@@ -25,6 +25,7 @@ li a:hover {
 
 .container {
   position: relative;
+  margin: auto;
   width: 50%;
 }
 
