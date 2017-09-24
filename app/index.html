@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<title>Listenin</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.
+0/css/font-awesome.min.css">
+<link rel="stylesheet" href="./index.css">
+<style>
+    html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+    body{ font-size:24px;margin:20px; }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<body>
+<img src="listen.png" width="25%"/>
+<!--Logo-->
+<!-- Navigation Bar -->
+<ul>
+        <li><a class="active" href="#home">Home</a></li>
+</ul>
+<br><br>
+Upload audio file here:
+<br>
+<span style="display:inline-block;margin:auto;"></span>
+<input type="file" capture="microphone" name="afile" id="afile" accept="audio/*"/>
+<hr>
+<p>Words to search on: </p>
+<span id="mywords"><i>Key words</i></span>&nbsp;
+<button id="cp">Copy To Clipboard</button>
+<br>
+<a href="https://open.spotify.com/browse/featured">
+<img src="spotify.png" width="20%"></a>
+<script>
+document.getElementById("cp").addEventListener("click", function() {
+    copyToClipboard(document.getElementById("mywords"));
+});
+
+function copyToClipboard(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+}
+
+document.querySelector('#afile').addEventListener('change', function(e) {
+  var file = this.files[0];
+  var fd = new FormData();
+  fd.append("afile", file);
+  // These extra params aren't necessary but show that you can include other data.
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', 'http://listenin.mybluemix.net/listen', true);
+  
+  xhr.upload.onprogress = function(e) {
+    if (e.lengthComputable) {
+      var percentComplete = (e.loaded / e.total) * 100;
+      console.log(percentComplete + '% uploaded');
+    }
+  };
+  xhr.onload = function() {
+    if (this.status == 200) {
+      var resp = this.response;
+      console.log('Server got:', resp);
+      document.getElementById("mywords").innerHTML = resp;
+    };
+  };
+  xhr.send(fd);
+}, false);
+
+</script>
+<script>
+
+<br>
+
+</body></html>
