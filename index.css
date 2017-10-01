@@ -6,7 +6,9 @@ ul {
     overflow: hidden;
     background-color: #ffe5cc;
 }
-
+body {
+     text-align:center;
+}
 li {
     float: left;
 }
