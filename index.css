@@ -12,7 +12,10 @@ body {
 li {
     float: left;
 }
-
+img {
+        display:block;
+        margin:auto;
+}
 li a {
     display: block;
     color: white;
