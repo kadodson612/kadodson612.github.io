@@ -1,37 +1,23 @@
-<!DOCTYPE html>
 <html>
-<title>kadodson612</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.
-0/css/font-awesome.min.css">
-<link rel="stylesheet" href="./index.css">
-<style>
-    html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
-    body{ font-size:20px;margin:20px; }
-</style>
-<body>
-<!--Logo-->
-<img align="middle" width="40%" src="./mylogo.png"/>
-<!-- Navigation Bar -->
-<ul>
-	<li><a class="active" href="#home">Home</a></li>
-	<li><a href="./contact.html">Contact</a></li>
-	<li><a href="./about.html">About</a></li>
-	<li><a href="./app">Listenin</a></li>
-</ul>
-<br>
-<!-- <img align="middle" style="width:50%" src="./tampa.JPG"/>-->
-<div class="container">
-	<img align="middle" src="./tampa.JPG" alt="Kelly" class="image">
-		<div class="overlay">
-			<div class="text">Hey there! I'm Kelly Dodson.
-			I'm currently a junior computer science major
-			studying at the University of Notre Dame. Thank
-			you for visiting this page!
-			</div>
-		</div>
+<head>
+<link href='https://fonts.googleapis.com/css?family=Raleway:500,400,300,200,100' rel='stylesheet' type='text/css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link href='index.css' rel='stylesheet' type='text/css'>
+</head>
+<canvas class="container" id="container" role="main"></canvas>
+
+<div class="content">
+	<h1 class="title">Kelly Dodson</h1>
+	<p class="desc">Junior computer science student at the University of Notre Dame</p>
+	<ul class="contact">
+		<li><a href="mailto:kadodson612@msn.com"><i class="fas fa-envelope-square"></i> Email</a></li>
+		<li><a target="_top" href="https://www.linkedin.com/in/kelly-dodson-151186129"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+		<li><a target="_top" href="https://github.com/kadodson612/"><i class="fab fa-github"></i> GitHub</a></li>
+	</ul>
 </div>
-</body>
+</div>
+<div class="blur blurTop"><canvas class="canvas"id="blurCanvasTop"></canvas></div>
+<div class="blur blurBottom"><canvas width="1000px" height="1000px" class="canvas" id="blurCanvasBottom"></canvas></div>
+<script src="index.js"></script>
 </html>
